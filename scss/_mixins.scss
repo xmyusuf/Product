@@ -1,0 +1,26 @@
+@mixin flex-style($align-item, $just-cont){
+  display: flex;
+  align-items: $align-item;
+  justify-content: $just-cont;
+} 
+
+@mixin list-unstyled($list-st-type) {
+  padding: 0;
+  margin: 0;
+  list-style-type: $list-st-type;
+}
+
+@mixin link-unstyled {
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+// Media query mixin
+
+@mixin breakpoint-down($screen-width) {
+  @media only screen and (max-width: $screen-width) {
+    @content;
+  }
+}
+
